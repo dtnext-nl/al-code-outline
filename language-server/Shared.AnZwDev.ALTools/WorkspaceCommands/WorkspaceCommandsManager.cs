@@ -78,6 +78,9 @@ namespace AnZwDev.ALTools.WorkspaceCommands
             this.RegisterCommand(groupCommand.AddCommand(new SortPermissionSetListWorkspaceCommand(this.ALDevToolsServer)));
             this.RegisterCommand(groupCommand.AddCommand(new FormatDocumentWorkspaceCommand(this.ALDevToolsServer)));
             this.RegisterCommand(groupCommand.AddCommand(new SortCustomizationsWorkspaceCommand(this.ALDevToolsServer)));
+#if !NAV2018
+            this.RegisterCommand(groupCommand.AddCommand(new SortEnumValuesWorkspaceCommand(this.ALDevToolsServer)));
+#endif
 
             this.RegisterCommand(groupCommand);
         }
